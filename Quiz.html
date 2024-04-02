@@ -1,0 +1,237 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>JavaScript Quiz</title>
+ <style>
+ /* Your CSS styles here */
+ </style>
+</head>
+<body>
+ <h1>JavaScript Quiz</h1>
+<div id="quiz">
+ Quiz questions and options will be generated here 
+</div>
+ <button onclick="submitQuiz()">Submit Quiz</button>
+ <div id="result"></div>
+
+ <script>
+ // Define quiz questions and answers
+var questions = [
+ {
+                question: "What does DOM stand for?",
+                options: ["Document Object Model", "Document Oriented Model", "Data Object Model", "Desktop Object Model"],
+                answer: "Document Object Model"
+            },
+            {
+                question: "How does JavaScript interact with the DOM?",
+                options: ["Through predefined objects and methods", "Through CSS selectors", "Through HTML attributes", "Through browser extensions"],
+                answer: "Through predefined objects and methods"
+            },
+            {
+                question: "What is one of the primary functions of JavaScript in web development regarding DOM manipulation?",
+                options: ["Creating web servers", "Manipulating CSS styles", "Manipulating DOM elements dynamically", "Storing data in databases"],
+                answer: "Manipulating DOM elements dynamically"
+            },
+            {
+                question: "What is event handling in the context of the DOM?",
+                options: ["Handling server-side events", "Handling database queries", "Responding to user interactions on a web page", "Managing CSS transitions"],
+                answer: "Responding to user interactions on a web page"
+            },
+            {
+                question: "Which benefit does the DOM provide to web developers in terms of updates?",
+                options: ["It allows for automatic updates without any intervention", "It enables manual updates only", "It supports dynamic updates without requiring page reloads", "It restricts updates to specific elements only"],
+                answer: "It supports dynamic updates without requiring page reloads"
+            },
+            {
+                question: "What does the DOM provide to ensure compatibility across different browsers and platforms?",
+                options: ["Standardized interface", "Customized interfaces for each browser", "Platform-specific APIs", "Compatibility plugins"],
+                answer: "Standardized interface"
+            },
+            {
+                question: "According to the article, what does the DOM promote in terms of code architecture?",
+                options: ["Tight coupling between HTML, CSS, and JavaScript", "Separation of content, presentation, and behavior", "Integration of server-side and client-side code", "Direct modification of browser settings"],
+                answer: "Separation of content, presentation, and behavior"
+            },
+            {
+                question: "How does JavaScript contribute to enhancing accessibility, as mentioned in the article?",
+                options: ["By providing audio feedback for user actions", "By allowing users to customize browser settings", "By modifying DOM elements to improve usability for users with disabilities", "By integrating screen readers directly into web pages"],
+                answer: "By modifying DOM elements to improve usability for users with disabilities"
+            }
+            // Add more questions here
+        ]
+ // Add more questions here
+ ];
+
+ // Initialize quiz index and score
+ var currentQuestion = 0;
+ var score = 0;
+
+ // Function to load question and options
+ function loadQuestion() {
+ var quiz = document.getElementById('quiz');
+ var question = questions[currentQuestion];
+ var optionsHTML = "";
+
+ // Generate options HTML
+for (var i = 0; i < question.options.length; i++) {
+optionsHTML += '<input type="radio" name="option" value="' + question.options[i] + '"> ' + question.options[i] + '<br>';
+ }
+
+// Display question and options
+ quiz.innerHTML = '<h2>' + question.question + '</h2>' + optionsHTML;
+}
+
+ // Function to submit quiz
+function submitQuiz() {
+ var selectedOption = document.querySelector('input[name="option"]:checked');
+if (selectedOption) {
+ // Check if selected option is correct
+ if (selectedOption.value === questions[currentQuestion].answer) {
+score++;
+}
+ // Move to next question
+ currentQuestion++;
+ // If quiz completed, show result
+if (currentQuestion < questions.length) {
+ loadQuestion();
+ } else {
+  showResult();
+ }
+ } else {
+ alert("Please select an option");
+}
+ }
+
+ // Function to show quiz result
+function showResult() {
+ var resultDiv = document.getElementById('result');
+ resultDiv.innerHTML = '<h2>Quiz Result</h2>' +
+'<p>Your score: ' + score + ' out of ' + questions.length + '</p>';
+ }
+
+ // Load first question
+ loadQuestion();
+ </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Quiz</title>
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>JavaScript Quiz</h1>
+<div id="quiz">
+    <!-- Quiz questions and options will be generated here -->
+</div>
+<button onclick="submitQuiz()">Submit Quiz</button>
+<div id="result"></div>
+
+<script>
+// Define quiz questions and answers
+var questions = [
+    {
+        question: "What does DOM stand for?",
+        options: ["Document Object Model", "Document Oriented Model", "Data Object Model", "Desktop Object Model"],
+        answer: "Document Object Model"
+    },
+    {
+        question: "How does JavaScript interact with the DOM?",
+        options: ["Through predefined objects and methods", "Through CSS selectors", "Through HTML attributes", "Through browser extensions"],
+        answer: "Through predefined objects and methods"
+    },
+    {
+        question: "What is one of the primary functions of JavaScript in web development regarding DOM manipulation?",
+        options: ["Creating web servers", "Manipulating CSS styles", "Manipulating DOM elements dynamically", "Storing data in databases"],
+        answer: "Manipulating DOM elements dynamically"
+    },
+    {
+        question: "What is event handling in the context of the DOM?",
+        options: ["Handling server-side events", "Handling database queries", "Responding to user interactions on a web page", "Managing CSS transitions"],
+        answer: "Responding to user interactions on a web page"
+    },
+    {
+        question: "Which benefit does the DOM provide to web developers in terms of updates?",
+        options: ["It allows for automatic updates without any intervention", "It enables manual updates only", "It supports dynamic updates without requiring page reloads", "It restricts updates to specific elements only"],
+        answer: "It supports dynamic updates without requiring page reloads"
+    },
+    {
+        question: "What does the DOM provide to ensure compatibility across different browsers and platforms?",
+        options: ["Standardized interface", "Customized interfaces for each browser", "Platform-specific APIs", "Compatibility plugins"],
+        answer: "Standardized interface"
+    },
+    {
+        question: "According to the article, what does the DOM promote in terms of code architecture?",
+        options: ["Tight coupling between HTML, CSS, and JavaScript", "Separation of content, presentation, and behavior", "Integration of server-side and client-side code", "Direct modification of browser settings"],
+        answer: "Separation of content, presentation, and behavior"
+    },
+    {
+        question: "How does JavaScript contribute to enhancing accessibility, as mentioned in the article?",
+        options: ["By providing audio feedback for user actions", "By allowing users to customize browser settings", "By modifying DOM elements to improve usability for users with disabilities", "By integrating screen readers directly into web pages"],
+        answer: "By modifying DOM elements to improve usability for users with disabilities"
+    }
+    // Add more questions here
+];
+
+// Initialize quiz index and score
+var currentQuestion = 0;
+var score = 0;
+
+// Function to load question and options
+function loadQuestion() {
+    var quiz = document.getElementById('quiz');
+    var question = questions[currentQuestion];
+    var optionsHTML = "";
+
+    // Generate options HTML
+    for (var i = 0; i < question.options.length; i++) {
+        optionsHTML += '<input type="radio" name="option" value="' + question.options[i] + '"> ' + question.options[i] + '<br>';
+    }
+
+    // Display question and options
+    quiz.innerHTML = '<h2>' + question.question + '</h2>' + optionsHTML;
+}
+
+// Function to submit quiz
+function submitQuiz() {
+    var selectedOption = document.querySelector('input[name="option"]:checked');
+   if (selectedOption) {
+        // Check if selected option is correct
+        if (selectedOption.value === questions[currentQuestion].answer) {
+            score++;
+        }
+
+        // Move to next question
+        currentQuestion++;
+
+        // If quiz completed, show result
+        if (currentQuestion < questions.length) {
+            loadQuestion();
+        } else {
+            showResult();
+        }
+    } else {
+        alert("Please select an option");
+    }
+}
+
+// Function to show quiz result
+function showResult() {
+    var resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = '<h2>Quiz Result</h2>' +
+        '<p>Your score: ' + score + ' out of ' + questions.length + '</p>';
+}
+
+// Load first question
+loadQuestion();
+</script>
+</body>
+</html>

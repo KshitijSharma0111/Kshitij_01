@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    /* Font styling */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f0fc;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    /* Container styling (header and sections) */
+    .container {
+        background-color: lightblue;
+        color: yellow;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    h2, h3 {
+        color: yellow;
+    }
+
+    p {
+        color: red;
+    }
+
+    .section {
+        display: none;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 600px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Button styling */
+    button {
+        background-color: salmon;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        margin: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #21409a;
+    }
+
+    /* Next button styling */
+    .next-button {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .next-button button {
+        background-color: yellow;
+        color: black;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .next-button button:hover {
+        background-color:  yellow;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Introduction</h1>
+    </header>
+    <button onclick="showSection('intro')">Intro</button>
+    <button onclick="showSection('skills')">Skills</button>
+    <button onclick="showSection('projects')">Projects</button>
+    <button onclick="showSection('interests')">Interests</button>
+    <button onclick="showSection('js')">JavaScript - Browser Object Model</button>
+    <main>
+        <section id="intro" class="section">
+            <h2>Introduction</h2>
+            <p>Greetings! I'm Kshitij Sharma, currently enrolled as a fourth-semester student at the University of Petroleum and Energy Studies (UPES), pursuing a Bachelor of Technology (B.Tech) degree in computer science and engineering (CSE). I have chosen to specialize in Cloud Computing and Virtualization Technology (CCVT) within the computer science domain. I am enthusiastic about the ever-evolving relationship between innovation and technology, and I am determined to enhance my expertise and skills in this rapidly expanding field. Motivated to generate substantial contributions to the technology sector and dedicated to maintaining high academic standards, I am excited about the prospects in both my academic and professional pursuits.</p>
+        </section>
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <p>I'm proficient with AWS, Azure, and Google Cloud. I'm also skilled in Python, Java, and C++. 
+                I'm an expert at network troubleshooting and SQL database management using VMware and VirtualBox virtualization platforms. 
+                With my familiarity with Windows, Linux, and macOS, I can communicate clearly in group projects.</p>
+        </section>
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <p>Currently working on a project in the field of Antibiotic spread in the environment under the Flat subject,
+                and developing a website for the problem statement in the traveling field and then merging it into a cloud server.
+            </p>
+        </section>
+        <section id="interests" class="section">
+            <h2>Interests</h2>
+            <p>I have interests in Sports, Coding, Book Reading, Poetries</p>
+        </section>
+        <section id="js" class="section">
+            <h3>Title: JS dom model</h3>
+            <p>
+                JavaScript, a versatile programming language primarily used for web development, owes much of its power to its interaction with the Document Object Model (DOM). The DOM serves as the intermediary between JavaScript and the elements of a web page, enabling dynamic and interactive web experiences. In this article, we'll delve into the fundamental concepts of the JavaScript DOM model and explore its significance in modern web development.
+
+What is the DOM?
+
+The Document Object Model, commonly abbreviated as the DOM, is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of HTML documents. It represents the web page as a tree-like structure, with each HTML element, attribute, and text node being a part of this hierarchical structure.
+
+How Does JavaScript Interact with the DOM?
+
+JavaScript interacts with the DOM through a set of predefined objects and methods provided by the browser environment. These objects represent various elements of the DOM tree, such as the document object, which serves as the entry point to the entire document, and elements like HTML elements, text nodes, attributes, and more.
+
+Manipulating DOM Elements
+
+One of the primary functions of JavaScript in web development is to manipulate DOM elements dynamically. Developers can use JavaScript to access, modify, or remove existing elements on the web page, as well as create new elements and append them to the document. This dynamic manipulation of the DOM allows for the creation of interactive user interfaces, real-time updates, and responsive web applications.
+
+Event Handling
+
+The DOM facilitates event-driven programming by allowing JavaScript to respond to user interactions, such as clicks, mouse movements, keyboard inputs, and form submissions. Event listeners can be attached to DOM elements, enabling developers to execute custom code in response to specific events. This event-driven approach forms the backbone of interactive web development, enabling the creation of rich user experiences.
+
+Benefits of the DOM
+
+The JavaScript DOM model offers several benefits to web developers:
+
+Dynamic Updates: Developers can update the content and style of web pages dynamically, without requiring page reloads, enhancing user experience and interactivity.
+
+Cross-browser Compatibility: The DOM provides a standardized interface for interacting with web documents, ensuring compatibility across different browsers and platforms.
+
+Separation of Concerns: By separating content (HTML), presentation (CSS), and behavior (JavaScript), the DOM promotes clean and maintainable code architecture.
+
+Accessibility: JavaScript can be used to enhance accessibility by modifying DOM elements to improve usability for users with disabilities.
+
+Conclusion
+
+In conclusion, the JavaScript Document Object Model (DOM) plays a pivotal role in modern web development, enabling dynamic, interactive, and responsive web experiences. By providing a standardized interface for accessing and manipulating web documents, the DOM empowers developers to create engaging user interfaces and seamless interactions on the web. Understanding the fundamentals of the DOM is essential for any JavaScript developer looking to build dynamic and interactive web applications.
+            </p>
+        </section>
+    </main>
+    <div class="next-button">
+        <a href="Quiz.html"><button>Take Quiz</button></a>
+    </div>
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
